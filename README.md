@@ -2,6 +2,8 @@
 
 > 修复[原神，启动！]模组时播放HOYO-MiX时会自动启动国服原神，未安装则打开启动器或云原神的bug
 
+针对的插件：[GaBoron/Genshin-Start-for-SPW](https://github.com/GaBoron/Genshin-Start-for-SPW)
+
 - 作者：Neko520nya
 - 插件 ID：`spw-genshin-no-start`
 - 当前版本：`1.5.0`
