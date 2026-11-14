@@ -1,0 +1,7 @@
+build/
+*.class
+*.jar
+diagnose/out/
+diagnose/*.jar
+diagnose/result*.txt
+.tmp-*

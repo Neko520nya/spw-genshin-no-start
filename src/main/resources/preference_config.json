@@ -1,0 +1,9 @@
+{
+  "configs": [{
+    "title": "界面提示",
+    "config": "config.json",
+    "preferences": [
+      { "type": "switch", "key": "ui.toast", "title": "界面提示", "summary": "开启后才会显示「插件加载成功」「已生效」等提示；默认关闭，不打扰使用。", "default_value": false }
+    ]
+  }]
+}
