@@ -1,0 +1,36 @@
+name: 发布 Release
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      # 构建产物随仓库一起提交，这里只负责把它挂到 Release 上。
+      # 已存在同名 Release 时只补传附件，避免重复推送触发失败。
+      - name: 创建或更新 Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          FILE="spw-genshin-no-start-1.5.0.spmod"
+          if gh release view v1.5.0 >/dev/null 2>&1; then
+            gh release upload v1.5.0 "$FILE" --clobber
+          else
+            gh release create v1.5.0 "$FILE" \
+              --title "v1.5.0 · 新增配置页与界面提示开关" \
+              --notes "修复[原神，启动！]模组时播放HOYO-MiX时会自动启动国服原神，未安装则打开启动器或云原神的bug。
+
+          - 新增模组配置页，「界面提示」开关默认关闭；关闭时插件完全静默
+          - 作者改为 Neko520nya，补充插件简介与开源链接
+          - 安装：下载 .spmod 后在 SPW 设置 → 创意工坊 → 模组管理导入并启用，然后完整重启播放器"
+          fi
