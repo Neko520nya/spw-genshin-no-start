@@ -4,10 +4,7 @@
 
 针对的插件：[GaBoron/Genshin-Start-for-SPW](https://github.com/GaBoron/Genshin-Start-for-SPW)
 
-- 作者：Neko520nya
 - 插件 ID：`spw-genshin-no-start`
-- 当前版本：`1.5.0`
-- 开源地址：<https://github.com/Neko520nya/spw-genshin-no-start>
 - 适用平台：Salt Player for Windows（SPW，需要 1.19+ 创意工坊支持）
 
 一个整活向的「反整活补丁」：装上它之后，播放 HOYO-MiX 的歌曲不会再让《原神，启动！》把原神、米哈游启动器或云原神网页拉起来。
@@ -16,6 +13,9 @@
 
 ## 安装
 
+在Steam创意工坊直接订阅然后启用插件
+https://steamcommunity.com/sharedfiles/filedetails/?id=3839726604
+或
 1. 在 [Releases](https://github.com/Neko520nya/spw-genshin-no-start/releases) 下载 `spw-genshin-no-start-1.5.0.spmod`（仓库根目录也保留了一份）。
 2. 打开 SPW → 设置 → 创意工坊 → 模组管理 → 导入模组，选择该 `.spmod`。
 3. **启用插件后完整退出并重新启动 SPW**。热加载/仅切歌不会让守护线程正确挂载。
